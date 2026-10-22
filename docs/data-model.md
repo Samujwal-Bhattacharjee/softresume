@@ -29,6 +29,8 @@ export interface ResumeDocument {
   awards?: Array<AwardItem>;
   volunteering?: Array<VolunteeringItem>;
   certifications?: Array<CertificationItem>;
+  publications?: Array<PublicationItem>;
+  customSections?: Array<CustomSection>;
   settings: {
     templateId: TemplateId;
     pageSize: "A4" | "US_LETTER";

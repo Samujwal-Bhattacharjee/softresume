@@ -528,12 +528,12 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-035, RS-070.
 
 ### RS-075 — Implement custom sections and optional fields
-- **Priority:** P1 | **Estimate:** L | **Labels:** `frontend`, `data`, `testing` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** L | **Labels:** `frontend`, `data`, `testing` | **Status:** Done
 - **Description:** Support additional sections such as volunteering, awards, certifications, leadership, languages and custom user-defined content.
 - **Acceptance criteria:**
-  - Empty sections do not render.
-  - Custom sections have safe labels/content limits.
-  - Templates can render or omit fields predictably.
+  - Empty sections do not render (verified across Classic ATS, Fresher/Graduate, Technical, Experienced, and Modern Editorial templates in `tests/custom-sections.test.tsx`).
+  - Custom sections have safe labels/content limits (section title capped at 80 chars, description capped at 2,000 chars, items bounded, input sanitization in `editor-store.ts`).
+  - Templates can render or omit fields predictably (all 5 templates render populated sections and cleanly omit empty/hidden sections; export parity verified for TXT, DOCX, and JSON Resume roundtripping in `tests/custom-sections.test.tsx`).
 - **Dependencies:** RS-030, RS-033, RS-051.
 
 ---

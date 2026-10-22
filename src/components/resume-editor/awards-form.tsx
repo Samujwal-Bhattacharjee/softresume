@@ -37,7 +37,7 @@ export function AwardsForm() {
       {awards.length === 0 ? (
         <div className="p-8 border-2 border-dashed border-neutral-200 rounded-xl text-center">
           <p className="text-xs text-neutral-500 mb-3">
-            No awards or honors added yet. Include Dean's list, hackathon placements, or company excellence awards.
+            No awards or honors added yet. Include Dean&apos;s list, hackathon placements, or company excellence awards.
           </p>
           <button
             type="button"

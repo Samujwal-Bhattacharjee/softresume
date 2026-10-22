@@ -375,6 +375,7 @@ describe("RS-075 — Custom Sections and Optional Fields", () => {
       // Re-import
       const reimported = importFromJsonResume(JSON.stringify(exportedJson));
       expect(reimported.success).toBe(true);
+      if (!reimported.document) throw new Error("Import failed");
       expect(reimported.document.customSections).toBeDefined();
       expect(reimported.document.customSections?.length).toBe(1);
       expect(reimported.document.customSections![0].title).toBe("Public Speaking");

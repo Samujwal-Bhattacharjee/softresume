@@ -33,6 +33,12 @@ SoftCV Studio is a full-stack, local-first, privacy-preserving career document s
   - Full two-way support for the official JSON Resume Schema (v1.0.0) in `src/lib/export/json-resume.ts`.
   - Accessible via the Data Controls & Privacy Subsystem and Template Settings deck.
   - Pre-flight validation preview, bounded 1MB file size checks, non-destructive cartridge creation, and lossless round-trip preservation of SoftCV layout extensions via namespaced `x-softcv` blocks.
+- **Custom Sections & Optional Fields (`RS-075`)**:
+  - Full modular support for Certifications, Honors & Awards, Volunteering & Community, Publications & Research, and user-defined Custom Sections.
+  - Complete integration across the 13-module Section Rack (`src/app/resume/[resumeId]/edit/page.tsx`), dedicated Console Chrome editing decks, and bounded undo/redo history.
+  - Clean omission guarantees: empty optional and custom sections never render in previews or exports.
+  - Rigorous safety limits: custom section titles bounded to 80 chars, descriptions bounded to 2,000 chars, and items bounded to prevent UI or PDF burst.
+  - Multi-template and multi-format export parity across all 5 production templates (Classic ATS, Fresher, Technical, Experienced, Modern Editorial) and binary exporters (PDF, DOCX, TXT, JSON Resume).
 - **Real Resume Template Variants (5 Implemented, 1 Deferred)**:
   - **Classic ATS**: Single-column, high-contrast, maximum parsing compatibility.
   - **Fresher / Graduate**: Highlights education, coursework, student projects, and hackathons.
