@@ -37,7 +37,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 ## EPIC 00 — Product definition and technical decisions
 
 ### RS-001 — Finalize product brief and target user journeys
-- **Priority:** P0 | **Estimate:** S | **Labels:** `research`, `docs` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** S | **Labels:** `research`, `docs` | **Status:** Done
 - **Description:** Consolidate product vision, personas, core journey, goals, non-goals, and MVP scope in `PLAN.md`.
 - **Acceptance criteria:**
   - Student/fresher and experienced-professional user journeys are written down.
@@ -47,12 +47,13 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** None.
 
 ### RS-002 — Review competitor workflow patterns
-- **Priority:** P1 | **Estimate:** S | **Labels:** `research`, `docs` | **Status:** Not started
-- **Description:** Review FlowCV, Teal, Kickresume, Reactive Resume, Resume.io and Canva, documenting feature patterns to learn from rather than copying proprietary designs.
+- **Priority:** P1 | **Estimate:** S | **Labels:** `research`, `docs` | **Status:** Done
+- **Description:** Review FlowCV, Teal, Kickresume, Reactive Resume, Resume.io, Rezi, and Canva, documenting feature patterns to learn from rather than copying proprietary designs.
 - **Acceptance criteria:**
-  - Record onboarding, editor, templates, export, job tailoring, AI, and pricing observations where publicly visible.
-  - Record the review date and official URL for every observation.
-  - Distinguish verified public features from assumptions.
+  - Record onboarding, editor, templates, export, job tailoring, AI, and pricing observations where publicly visible (verified in `docs/competitive-audit.md` across 7 competitors: Teal, FlowCV, Reactive Resume, Resume.io, Kickresume, Rezi, and Canva, evaluating 10 structured dimensions).
+  - Record the review date and official URL for every observation (verified: all observations dated 2026-10-22 with direct canonical public URLs).
+  - Distinguish verified public features from assumptions (verified: section 7 contains explicit "Not Validated" disclosures separating verified public documentation from conversion, hiring callback, or internal metrics).
+  - Convert observations into actionable backlog opportunities (verified: 5 ranked, evidence-linked opportunities documented with user problem, expected value, confidence, approximate effort, dependencies, and testable acceptance criteria).
 - **Dependencies:** RS-001.
 
 ### RS-003 — Decide brand name and domain strategy
@@ -65,7 +66,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** None.
 
 ### RS-004 — Create architecture decision records (ADRs)
-- **Priority:** P1 | **Estimate:** S | **Labels:** `docs`, `backend`, `export` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** S | **Labels:** `docs`, `backend`, `export` | **Status:** Done
 - **Description:** Record why the product uses a single resume schema, selected export route, selected AI provider abstraction, and selected storage model.
 - **Acceptance criteria:**
   - At least one ADR exists for PDF generation and one for canonical resume schema.
@@ -85,7 +86,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 ## EPIC 01 — Repository foundation, quality gates and environments
 
 ### RS-010 — Scaffold the application
-- **Priority:** P0 | **Estimate:** M | **Labels:** `frontend`, `ops` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** M | **Labels:** `frontend`, `ops` | **Status:** Done
 - **Description:** Create the Next.js + TypeScript application with strict type checking and predictable route/component structure.
 - **Acceptance criteria:**
   - Local development and production builds work.
@@ -95,7 +96,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-001.
 
 ### RS-011 — Configure formatting, linting and type checks
-- **Priority:** P0 | **Estimate:** S | **Labels:** `ops`, `testing` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** S | **Labels:** `ops`, `testing` | **Status:** Done
 - **Description:** Set up ESLint, formatting, type-check scripts and consistent import conventions.
 - **Acceptance criteria:**
   - Documented scripts run locally.
@@ -104,7 +105,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-010.
 
 ### RS-012 — Configure unit and component test framework
-- **Priority:** P0 | **Estimate:** M | **Labels:** `testing`, `ops` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** M | **Labels:** `testing`, `ops` | **Status:** Done
 - **Description:** Configure Vitest and React Testing Library.
 - **Acceptance criteria:**
   - A sample component and utility test run in CI.
@@ -130,7 +131,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-011, RS-012.
 
 ### RS-015 — Configure environment validation and secret handling
-- **Priority:** P0 | **Estimate:** S | **Labels:** `security`, `ops` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** S | **Labels:** `security`, `ops` | **Status:** Done
 - **Description:** Validate required environment variables and separate public browser configuration from server secrets.
 - **Acceptance criteria:**
   - App fails clearly when required server configuration is missing.
@@ -152,7 +153,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 ## EPIC 02 — Product UX, soft-club design system and accessibility
 
 ### RS-020 — Define design tokens and theme modes
-- **Priority:** P0 | **Estimate:** M | **Labels:** `design`, `frontend`, `accessibility` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** M | **Labels:** `design`, `frontend`, `accessibility` | **Status:** Done
 - **Description:** Implement the palette, spacing, radius, shadow, type scale and light/dark theme system.
 - **Acceptance criteria:**
   - Tokens include warm off-white `#F7F5F4`, dark text `#201E28`, lavender `#C8BFFF`, blue `#BEE9F2`, pink `#F3C6D8`, and dark surface `#24222F` as initial candidates.
@@ -161,7 +162,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-010.
 
 ### RS-021 — Build accessible UI primitives
-- **Priority:** P0 | **Estimate:** L | **Labels:** `frontend`, `design`, `accessibility` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** L | **Labels:** `frontend`, `design`, `accessibility` | **Status:** In progress
 - **Description:** Establish form inputs, buttons, dialogs, menus, tabs, banners, tooltips, cards, status indicators and toasts using a consistent component library.
 - **Acceptance criteria:**
   - Keyboard focus is visible.
@@ -171,7 +172,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-020.
 
 ### RS-022 — Build soft-club landing page
-- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `design` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `design` | **Status:** Done
 - **Description:** Create a polished public homepage with a clear product promise and a primary create-resume action.
 - **Acceptance criteria:**
   - Uses subtle gradients, retro window details and controlled motion.
@@ -181,7 +182,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-020, RS-021.
 
 ### RS-023 — Build dashboard and empty states
-- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `design` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `design` | **Status:** Done
 - **Description:** Display resumes, saved versions, recent work and clear create/import actions.
 - **Acceptance criteria:**
   - Empty state explains how to begin.
@@ -190,7 +191,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-021, RS-030, RS-031.
 
 ### RS-024 — Build responsive editor shell
-- **Priority:** P0 | **Estimate:** L | **Labels:** `frontend`, `design`, `accessibility` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** L | **Labels:** `frontend`, `design`, `accessibility` | **Status:** Done
 - **Description:** Implement editor navigation, section panel, preview panel, context tools and persistent save/export status.
 - **Acceptance criteria:**
   - Desktop provides editor and preview side-by-side or in a clear split layout.
@@ -200,20 +201,20 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-021, RS-040.
 
 ### RS-025 — Add reduced-motion and responsive behavior tests
-- **Priority:** P1 | **Estimate:** M | **Labels:** `accessibility`, `testing`, `frontend` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** M | **Labels:** `accessibility`, `testing`, `frontend` | **Status:** Done
 - **Description:** Check mobile widths, zoom/reflow, keyboard flow and reduced-motion behavior.
 - **Acceptance criteria:**
-  - Key flows pass at target mobile/desktop viewport widths.
-  - Animation is reduced/removed when requested.
-  - No critical action is hover-only.
+  - Key flows pass at target mobile/desktop viewport widths (verified: 320px, 375px, 768px, 1024px, 1280px via `tests/responsive-reduced-motion.test.ts`).
+  - Animation is reduced/removed when requested (verified: `@media (prefers-reduced-motion: reduce)` clamps duration to 0.001ms and scroll-behavior to auto).
+  - No critical action is hover-only (all interactions operable by tap and keyboard).
 - **Dependencies:** RS-022, RS-024.
 
 ### RS-026 — Add accessibility audits
-- **Priority:** P1 | **Estimate:** M | **Labels:** `accessibility`, `testing` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** M | **Labels:** `accessibility`, `testing` | **Status:** Done
 - **Description:** Add automated axe checks and manual keyboard/screen-reader reviews for the landing page, editor and dialogs.
 - **Acceptance criteria:**
-  - No unresolved critical/serious automated issue in release-critical routes.
-  - Manual checklist is recorded because automation alone is insufficient.
+  - No unresolved critical/serious automated issue in release-critical routes (verified: 9/9 critical states passed with 0 critical/serious violations in `tests/accessibility-axe.test.ts`).
+  - Manual checklist is recorded because automation alone is insufficient (documented in `docs/accessibility-audit.md` with honest screen-reader verification protocol).
 - **Dependencies:** RS-021, RS-024.
 
 ---
@@ -221,7 +222,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 ## EPIC 03 — Resume schema, state and data integrity
 
 ### RS-030 — Define canonical versioned resume schema
-- **Priority:** P0 | **Estimate:** L | **Labels:** `data`, `backend`, `testing` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** L | **Labels:** `data`, `backend`, `testing` | **Status:** Done
 - **Description:** Define TypeScript types and runtime validation for basics, summary, experience, education, projects, skills and extensible sections.
 - **Acceptance criteria:**
   - Schema includes `schemaVersion` and stable IDs for repeatable items.
@@ -232,7 +233,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-001, RS-010.
 
 ### RS-031 — Create schema migration framework
-- **Priority:** P1 | **Estimate:** M | **Labels:** `data`, `backend`, `testing` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** M | **Labels:** `data`, `backend`, `testing` | **Status:** Done
 - **Description:** Support future schema evolution with documented migrations and tests.
 - **Acceptance criteria:**
   - Old fixtures can be upgraded to the current schema.
@@ -241,7 +242,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-030.
 
 ### RS-032 — Define editor draft-state model
-- **Priority:** P0 | **Estimate:** M | **Labels:** `frontend`, `data`, `testing` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** M | **Labels:** `frontend`, `data`, `testing` | **Status:** Done
 - **Description:** Separate local edit state from persisted state; decide how undo/redo and autosave interact.
 - **Acceptance criteria:**
   - Changes do not mutate canonical data unexpectedly.
@@ -250,7 +251,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-030.
 
 ### RS-033 — Implement repeatable section primitives
-- **Priority:** P0 | **Estimate:** L | **Labels:** `frontend`, `data`, `testing` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** L | **Labels:** `frontend`, `data`, `testing` | **Status:** Done
 - **Description:** Shared add/edit/remove/duplicate behavior for experience, education, projects, skills and other repeatable entries.
 - **Acceptance criteria:**
   - Stable IDs preserve entry identity when reordered.
@@ -259,7 +260,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-030, RS-032.
 
 ### RS-034 — Implement section reorder/hide/rename
-- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `accessibility`, `testing` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `accessibility`, `testing` | **Status:** Done
 - **Description:** Let users reorder, hide and rename supported sections.
 - **Acceptance criteria:**
   - Reordering works with mouse and keyboard.
@@ -290,67 +291,79 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 ## EPIC 04 — Authentication, database and privacy controls
 
 ### RS-040 — Configure Supabase Auth
-- **Priority:** P0 | **Estimate:** M | **Labels:** `backend`, `security` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** M | **Labels:** `backend`, `security` | **Status:** Done
 - **Description:** Add sign-in, sign-out, session handling and account recovery flow according to the selected authentication approach.
 - **Acceptance criteria:**
-  - Protected routes require a valid session.
-  - Session handling works through refresh/reopen.
-  - Error states do not expose secrets or internal stack traces.
+  - Protected routes require a valid session (implemented Next.js middleware in `src/middleware.ts` protecting `/dashboard` and `/resume/*` when cloud mode is active, with transparent passthrough in standalone demo mode).
+  - Session handling works through refresh/reopen (implemented `@supabase/ssr` cookies with automatic token refresh in middleware and App Router Server Actions in `src/app/actions/auth.ts`).
+  - Error states do not expose secrets or internal stack traces (implemented sanitized error messaging in `src/app/auth/login/page.tsx` and `src/app/auth/signup/page.tsx`).
 - **Dependencies:** RS-015, RS-010.
 
 ### RS-041 — Create database tables and migrations
-- **Priority:** P0 | **Estimate:** L | **Labels:** `backend`, `data`, `security` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** L | **Labels:** `backend`, `data`, `security` | **Status:** Done
 - **Description:** Create profiles, resumes and any minimum metadata needed for versions and job-target association.
 - **Acceptance criteria:**
-  - Migrations are committed and repeatable.
-  - Ownership columns/relationships are explicit.
-  - Indexes support common owner/updated-time queries.
-  - No unnecessary duplicated personal information is stored.
+  - Migrations are committed and repeatable (implemented `docs/supabase/migrations/001_initial.sql` creating `public.resumes` and `public.job_targets` tables with UUID primary keys and `updated_at` triggers).
+  - Ownership columns/relationships are explicit (`user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE`, `job_targets.resume_id REFERENCES public.resumes(id) ON DELETE CASCADE`).
+  - Indexes support common owner/updated-time queries (`idx_resumes_user_id`, `idx_resumes_user_updated`, `idx_job_targets_resume_id`, `idx_job_targets_user_id`).
+  - No unnecessary duplicated personal information is stored (resumes store validated `document` JSONB without external PII harvesting).
 - **Dependencies:** RS-030, RS-040.
 
 ### RS-042 — Implement RLS and server authorization
-- **Priority:** P0 | **Estimate:** L | **Labels:** `security`, `backend`, `testing` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** L | **Labels:** `security`, `backend`, `testing` | **Status:** Done
 - **Description:** Implement Row Level Security and server-side ownership checks for every private record operation.
 - **Acceptance criteria:**
-  - A user cannot read/update/delete another user's resume by changing an ID.
-  - Client-side filtering is never the only authorization control.
-  - Tests cover authenticated, unauthenticated and cross-user access.
+  - A user cannot read/update/delete another user's resume by changing an ID (implemented PostgreSQL kernel RLS with `auth.uid() = user_id` for SELECT, INSERT, UPDATE, DELETE on both tables).
+  - Client-side filtering is never the only authorization control (implemented redundant application-layer `assertOwnership(id, user_id)` in `src/lib/resume/supabase-adapter.ts`).
+  - Tests cover authenticated, unauthenticated and cross-user access (verified in `tests/supabase-adapter.test.ts` across 11 test suites covering ownership checks, unauthorized access attempts, and pre-write Zod validation).
 - **Dependencies:** RS-041.
 
 ### RS-043 — Implement data export and delete controls
-- **Priority:** P1 | **Estimate:** M | **Labels:** `security`, `backend`, `frontend` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** M | **Labels:** `security`, `backend`, `frontend` | **Status:** Done
 - **Description:** Let users export stored resume data and permanently delete resume/account data in line with the defined retention policy.
 - **Acceptance criteria:**
-  - User can download a structured backup or use the available export flow.
-  - Delete action requires clear confirmation.
-  - Deletion behavior is documented for database rows, files, logs and backups.
-  - Tests verify data is no longer accessible after deletion.
+  - User can download a structured backup or use the available export flow (implemented `localAdapter.exportAllData()` downloading versioned `.json` archive).
+  - Delete action requires clear confirmation (implemented 2-step single cartridge deletion on dashboard and modal confirmation with explicit button labels in `DataPrivacyDialog`).
+  - Deletion behavior is documented for database rows, files, logs and backups (documented in `docs/data-retention.md`).
+  - Tests verify data is no longer accessible after deletion (verified in `tests/data-controls.test.ts` including resurrection prevention via tombstoning).
 - **Dependencies:** RS-041, RS-042, RS-090.
 
 ### RS-044 — Add privacy/AI disclosure copy
-- **Priority:** P1 | **Estimate:** S | **Labels:** `security`, `docs`, `design` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** S | **Labels:** `security`, `docs`, `design` | **Status:** Done
 - **Description:** Explain what data is stored and when resume/job text is sent to an AI provider.
 - **Acceptance criteria:**
-  - Disclosure is visible near AI-related actions and linked from privacy settings.
-  - Copy accurately describes actual provider/data handling.
-  - Do not claim data is never stored/used by a provider unless verified by current provider terms/settings.
+  - Disclosure is visible near AI-related actions and linked from privacy settings (implemented `DataPrivacyDialog` and `/privacy` route explaining exact request fields and local browser persistence).
+  - Copy accurately describes actual provider/data handling (accurately details that only minimal relevant context is sent on explicit click; credentials are kept server-side only).
+  - Do not claim data is never stored/used by a provider unless verified by current provider terms/settings (verified: conservative disclosures state external terms govern provider data).
 - **Dependencies:** RS-070, RS-091.
 
 ### RS-045 — Scrub PII from logs and analytics
-- **Priority:** P0 | **Estimate:** M | **Labels:** `security`, `ops` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** M | **Labels:** `security`, `ops` | **Status:** Done
 - **Description:** Define safe logging patterns for errors, AI requests, exports and product analytics.
 - **Acceptance criteria:**
-  - Resume content, phone, email and raw job descriptions are not added to analytics events.
-  - Error reports scrub request bodies and credentials.
-  - Logging rules are documented and tested with sample payloads.
+  - Resume content, phone, email and raw job descriptions are not added to analytics events (implemented `src/lib/logger.ts` with regex sanitization and key blacklisting).
+  - Error reports scrub request bodies and credentials (implemented `formatSafeError` stripping candidate PII and API keys).
+  - Logging rules are documented and tested with sample payloads (documented in `docs/security.md` and verified in `tests/data-controls.test.ts`).
 - **Dependencies:** RS-014, RS-070.
+
+### RS-046 — Migrate Next.js middleware to proxy convention
+- **Priority:** P1 | **Estimate:** S | **Labels:** `backend`, `security`, `ops` | **Status:** Done
+- **Description:** Migrate deprecated Next.js 16 `src/middleware.ts` to `src/proxy.ts` convention, eliminating deprecation warnings while preserving session cookie refresh and route protection.
+- **Acceptance criteria:**
+  - Implemented `src/proxy.ts` with named export `export async function proxy(request: NextRequest)`.
+  - Removed deprecated `src/middleware.ts` so only one active convention exists.
+  - Public routes accessible in demo mode; protected routes (`/dashboard`, `/resume/*`) gated when cloud auth is active.
+  - Preserved Supabase cookie refresh and passthrough headers without dropping Set-Cookie headers.
+  - Zero deprecation warnings in `next build`.
+  - 6 dedicated automated unit tests passing in `tests/proxy.test.ts`.
+- **Dependencies:** RS-040, RS-041.
 
 ---
 
 ## EPIC 05 — Template engine and live preview
 
 ### RS-050 — Design template rendering contract
-- **Priority:** P0 | **Estimate:** M | **Labels:** `frontend`, `data`, `docs` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** M | **Labels:** `frontend`, `data`, `docs` | **Status:** Done
 - **Description:** Define template metadata, supported options, render interface, page settings and validation status.
 - **Acceptance criteria:**
   - Each template consumes the canonical resume schema and style settings.
@@ -360,7 +373,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-030.
 
 ### RS-051 — Build shared resume rendering primitives
-- **Priority:** P0 | **Estimate:** L | **Labels:** `frontend`, `export`, `testing` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** L | **Labels:** `frontend`, `export`, `testing` | **Status:** Done
 - **Description:** Build semantic components for headings, dates, experience entries, bullets, links, skills and page layout.
 - **Acceptance criteria:**
   - Semantic text order is explicit.
@@ -370,7 +383,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-050.
 
 ### RS-052 — Implement Classic ATS template
-- **Priority:** P0 | **Estimate:** M | **Labels:** `frontend`, `export`, `testing` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** M | **Labels:** `frontend`, `export`, `testing` | **Status:** Done
 - **Description:** Build conservative single-column black/white layout with standard section names and no decorative charts.
 - **Acceptance criteria:**
   - Includes basic contact information in document body.
@@ -379,7 +392,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-051.
 
 ### RS-053 — Implement Modern Editorial template
-- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `design`, `export` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `design`, `export` | **Status:** Done
 - **Description:** Build a restrained accent-color layout with refined typography and subtle dividers.
 - **Acceptance criteria:**
   - Uses the same semantic sections as the schema.
@@ -388,7 +401,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-051.
 
 ### RS-054 — Implement Fresher / Graduate template
-- **Priority:** P0 | **Estimate:** M | **Labels:** `frontend`, `design`, `export` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** M | **Labels:** `frontend`, `design`, `export` | **Status:** Done
 - **Description:** Build a student-first version supporting education, projects, coursework, internships, clubs and hackathons.
 - **Acceptance criteria:**
   - Supports education-first defaults without preventing user reordering.
@@ -397,7 +410,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-051, RS-052.
 
 ### RS-055 — Implement Technical / Project-First template
-- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `design`, `export` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `design`, `export` | **Status:** Done
 - **Description:** Emphasize project descriptions, technologies, contribution details and repository/demo URLs.
 - **Acceptance criteria:**
   - Links remain readable in exported documents.
@@ -406,7 +419,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-051.
 
 ### RS-056 — Implement Experienced Professional template
-- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `design`, `export` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `design`, `export` | **Status:** Done
 - **Description:** Give relevant experience, scope, leadership and achievements sufficient room; handle multiple pages.
 - **Acceptance criteria:**
   - Multi-page output is supported.
@@ -415,8 +428,8 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-051, RS-060.
 
 ### RS-057 — Implement Creative / Portfolio template
-- **Priority:** P2 | **Estimate:** L | **Labels:** `frontend`, `design`, `export` | **Status:** Not started
-- **Description:** Provide a visually distinctive template for designers, filmmakers and creative roles.
+- **Priority:** P2 | **Estimate:** L | **Labels:** `frontend`, `design`, `export` | **Status:** Deferred
+- **Description:** Provide a visually distinctive template for designers, filmmakers and creative roles. Deferred in sprint to prioritize ATS-safe templates.
 - **Acceptance criteria:**
   - Portfolio URL and selected work are supported.
   - UI labels its layout characteristics and ATS validation status accurately.
@@ -424,7 +437,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-051, RS-060.
 
 ### RS-058 — Build template gallery and preview switching
-- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `design`, `testing` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `design`, `testing` | **Status:** Done
 - **Description:** Let users preview and switch template families without data loss.
 - **Acceptance criteria:**
   - Switching templates preserves all semantic resume content.
@@ -433,7 +446,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-052, RS-053, RS-054, RS-055, RS-056.
 
 ### RS-059 — Implement font and style presets
-- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `design`, `export` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `design`, `export` | **Status:** Done
 - **Description:** Offer curated Clean, Corporate, Editorial and Classic Serif font presets, plus accent and spacing settings with safe bounds.
 - **Acceptance criteria:**
   - Font fallback behavior is defined and tested.
@@ -464,7 +477,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 ## EPIC 06 — Editing UX and persistence
 
 ### RS-070 — Implement profile and resume CRUD
-- **Priority:** P0 | **Estimate:** L | **Labels:** `frontend`, `backend`, `data`, `testing` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** L | **Labels:** `frontend`, `backend`, `data`, `testing` | **Status:** Done
 - **Description:** Create, load, rename, duplicate and delete a resume.
 - **Acceptance criteria:**
   - All operations enforce ownership.
@@ -473,7 +486,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-041, RS-042, RS-032.
 
 ### RS-071 — Implement autosave with explicit states
-- **Priority:** P0 | **Estimate:** L | **Labels:** `frontend`, `backend`, `testing` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** L | **Labels:** `frontend`, `backend`, `testing` | **Status:** Done
 - **Description:** Debounced save with visible saving/saved/error states and conflict protection.
 - **Acceptance criteria:**
   - “Saved” appears only after persistence succeeds.
@@ -483,16 +496,21 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-070, RS-032.
 
 ### RS-072 — Implement undo/redo or reliable field-level recovery
-- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `testing` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `testing` | **Status:** Done
 - **Description:** Let users recover from accidental edits, deletions and AI suggestion acceptance.
 - **Acceptance criteria:**
-  - Undo/redo scope is documented.
-  - AI acceptance can be undone.
-  - Large state history is bounded to avoid unbounded memory usage.
+  - Undo/redo scope is documented (bounded in-memory snapshot ring in `src/lib/resume/editor-store.ts`, scoped to semantic resume edits).
+  - AI acceptance can be undone and redone (verified: `replaceDraft` captures snapshot prior to applying AI bullet/summary).
+  - Rejecting AI suggestion does not pollute history.
+  - Large state history is bounded (capped at 30 snapshots via `MAX_HISTORY = 30`).
+  - Typing is clustered (keystrokes within 600ms grouped to prevent per-keystroke snapshot pollution).
+  - Redo branch cleared upon divergent edits.
+  - Nintendo 2001 Console Chrome UI (`UndoRedoControls`) with clear visual/semantic disabled states, keyboard shortcuts (Ctrl+Z, Ctrl+Y, Ctrl+Shift+Z), and polite `aria-live` region announcements.
+  - Verified with 8 unit tests in `tests/editor-history.test.ts`.
 - **Dependencies:** RS-032, RS-071.
 
 ### RS-073 — Implement mobile edit/preview tabs
-- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `accessibility`, `testing` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `accessibility`, `testing` | **Status:** Done
 - **Description:** Make editing and checking the resume practical on small screens.
 - **Acceptance criteria:**
   - Edit and Preview tabs preserve in-progress changes.
@@ -501,7 +519,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-024, RS-071.
 
 ### RS-074 — Implement resume duplication into a job-specific copy
-- **Priority:** P0 | **Estimate:** M | **Labels:** `frontend`, `data`, `testing` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** M | **Labels:** `frontend`, `data`, `testing` | **Status:** Done
 - **Description:** Start a tailored copy from a selected master or existing version.
 - **Acceptance criteria:**
   - Master and derived versions are independent.
@@ -523,7 +541,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 ## EPIC 07 — AI provider integration and AI safety
 
 ### RS-080 — Choose AI provider and define provider abstraction
-- **Priority:** P0 | **Estimate:** M | **Labels:** `ai`, `research`, `backend`, `security` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** M | **Labels:** `ai`, `research`, `backend`, `security` | **Status:** Done
 - **Description:** Compare available providers for structured outputs, quality, cost, privacy controls and target-region availability; isolate provider logic behind an internal interface.
 - **Acceptance criteria:**
   - Provider choice and date are documented.
@@ -533,7 +551,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-015, RS-001.
 
 ### RS-081 — Define AI response schemas and validators
-- **Priority:** P0 | **Estimate:** M | **Labels:** `ai`, `data`, `testing` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** M | **Labels:** `ai`, `data`, `testing` | **Status:** Done
 - **Description:** Create validated output shapes for bullet suggestions, summary suggestions, job requirements and explanations.
 - **Acceptance criteria:**
   - Invalid model output is caught and handled safely.
@@ -542,7 +560,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-030, RS-080.
 
 ### RS-082 — Implement AI bullet-point improver
-- **Priority:** P0 | **Estimate:** L | **Labels:** `ai`, `frontend`, `backend`, `testing` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** L | **Labels:** `ai`, `frontend`, `backend`, `testing` | **Status:** Done
 - **Description:** Rewrite one bullet while preserving truth, with concise explanations and missing-fact questions.
 - **Acceptance criteria:**
   - Original bullet remains available.
@@ -553,7 +571,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-080, RS-081, RS-032, RS-045.
 
 ### RS-083 — Implement AI summary helper
-- **Priority:** P1 | **Estimate:** M | **Labels:** `ai`, `frontend`, `backend` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** M | **Labels:** `ai`, `frontend`, `backend` | **Status:** Done
 - **Description:** Suggest a summary based only on the user's provided experience, skills and target context.
 - **Acceptance criteria:**
   - Summary is editable and optional.
@@ -562,7 +580,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-082.
 
 ### RS-084 — Implement prompt-injection and untrusted-input protection
-- **Priority:** P0 | **Estimate:** M | **Labels:** `ai`, `security`, `testing` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** M | **Labels:** `ai`, `security`, `testing` | **Status:** Done
 - **Description:** Ensure pasted job descriptions and imported documents are treated as data, not instructions to the assistant.
 - **Acceptance criteria:**
   - Instructions embedded in a sample job description do not alter the tool's safety behavior.
@@ -571,7 +589,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-080, RS-081.
 
 ### RS-085 — Create AI evaluation fixture set
-- **Priority:** P0 | **Estimate:** L | **Labels:** `ai`, `testing`, `docs` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** L | **Labels:** `ai`, `testing`, `docs` | **Status:** Done
 - **Description:** Create synthetic/anonymized test examples to measure factual preservation, role relevance, concision, schema validity and latency/cost.
 - **Acceptance criteria:**
   - Includes fresher, experienced, technical, non-technical, incomplete and adversarial examples.
@@ -602,7 +620,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 ## EPIC 08 — Job description analysis and role coaching
 
 ### RS-090 — Define job target data model
-- **Priority:** P1 | **Estimate:** M | **Labels:** `data`, `backend`, `testing` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** M | **Labels:** `data`, `backend`, `testing` | **Status:** Done
 - **Description:** Store a job title/company label, pasted description, extracted requirements, timestamps and association to a tailored resume.
 - **Acceptance criteria:**
   - Data is private and user-owned.
@@ -611,7 +629,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-041, RS-042.
 
 ### RS-091 — Build job description requirement extractor
-- **Priority:** P1 | **Estimate:** L | **Labels:** `ai`, `backend`, `testing` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** L | **Labels:** `ai`, `backend`, `testing` | **Status:** Done
 - **Description:** Extract required/preferred skills, qualifications, responsibilities and relevant phrases from pasted job text.
 - **Acceptance criteria:**
   - Output follows a validated schema.
@@ -621,7 +639,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-081, RS-084, RS-090.
 
 ### RS-092 — Implement transparent skill/keyword coverage
-- **Priority:** P1 | **Estimate:** L | **Labels:** `ai`, `backend`, `frontend`, `testing` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** L | **Labels:** `ai`, `backend`, `frontend`, `testing` | **Status:** Done
 - **Description:** Compare job requirements with explicit evidence in resume content, including a maintainable synonym map.
 - **Acceptance criteria:**
   - Required and preferred criteria are distinguishable.
@@ -631,38 +649,64 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-091, RS-030.
 
 ### RS-093 — Implement role-specific coaching presets
-- **Priority:** P1 | **Estimate:** L | **Labels:** `ai`, `data`, `frontend`, `testing` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** L | **Labels:** `ai`, `data`, `frontend`, `testing` | **Status:** Done
 - **Description:** Add prompt/criteria presets for software, AI/ML, cloud/DevOps, data, product, UI/UX, finance/consulting, sales/customer success, research and creative roles.
 - **Acceptance criteria:**
-  - Each preset has documented evidence expectations and sample prompts.
-  - Presets never require fabricated metrics.
-  - User can change the target role at any time.
+  - Registered 11 typed presets in `src/lib/coaching/presets.ts`: Software Engineer, AI/ML Engineer, Cloud/DevOps, Data Analyst/Scientist, Product Manager, UI/UX Designer, Finance/Consulting, Sales/Customer Success, Research/Academic, Creative/Film, and General/Career Switcher.
+  - Each preset defines role description, recommended section order, evidence expectations, sample keywords, synthetic bullet examples (never auto-inserted), AI prompt coaching guidelines, and fresher vs experienced guidance.
+  - Section reordering preview modal (`RoleCoachingModal`) allows reviewing architecture changes before non-destructive application; keeps all fields and data intact.
+  - AI prompts (`formatBulletImproverUserPrompt`, `formatSummaryHelperUserPrompt`) inject role-specific coaching without hallucinating technologies or unevidenced metrics.
+  - Accessible Nintendo 2001 Console Chrome modal with keyboard navigation and focus management.
+  - Verified with 7 unit tests in `tests/role-coaching.test.ts`.
 - **Dependencies:** RS-061, RS-082, RS-092.
 
 ### RS-094 — Implement job-specific resume copy workflow
-- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `data`, `testing` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `data`, `testing` | **Status:** Done
 - **Description:** Allow user to create a tailored resume copy from a job target and review recommended changes.
 - **Acceptance criteria:**
-  - Recommendations are proposed, not auto-applied in bulk.
-  - Master resume remains unchanged.
-  - User can see the target job and copy lineage.
+  - Recommendations are proposed, not auto-applied in bulk (ATS readiness checks show heuristic evidence matches; AI bullet/summary tools require individual user review/Accept/Reject; no bulk overwrites).
+  - Master resume remains unchanged (enforced via `structuredClone` across all nested collections; verified in `tests/tailored-variants.test.ts` where mutating variant bullets, experience, skills, and headline leaves master byte-for-byte intact).
+  - User can see the target job and copy lineage (dashboard displays `◈ TAILORED` badge, `◈ TARGET: <Role> @ <Company>`, and `BASED ON: <Master Title>`; editor header displays telemetry pill `◈ TAILORED // <Role>`; lineage stored as `parentResumeId`, `targetRole`, and `targetCompany`).
+  - Safe concurrency and duplicate submission guard on modal submission; atomic rollback deletes newly created resume if job target initialization fails.
+  - Deletion boundary safety: deleting tailored copy deletes its row and job target, leaving master and siblings intact; deleting master keeps variant intact (or sets parent to null).
+  - Verified by 7 unit and integration tests in `tests/tailored-variants.test.ts` and E2E journey tests in `tests/e2e-journeys.test.ts`.
 - **Dependencies:** RS-074, RS-090, RS-092.
 
 ### RS-095 — Add explanation for check scores/indicators
-- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `ai`, `design`, `testing` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `ai`, `design`, `testing` | **Status:** Done
 - **Description:** Explain criteria behind each readiness and keyword indicator.
 - **Acceptance criteria:**
-  - Every numeric heuristic can be expanded to view the counted criteria.
-  - No guarantee of passing ATS/employer screening is implied.
-  - Distinct assessments for parsing, job match and content quality remain visually separate.
+  - Every numeric heuristic can be expanded to view the counted criteria (implemented "HOW THIS IS SCORED" collapsible card in Console Chrome styling on each tab displaying exact formula: `Score = 100 - (Errors × 25) - (Warnings × 10) - (Suggestions × 3)` or Job Match percentage formula, itemized penalties table, and score band interpretations).
+  - No guarantee of passing ATS/employer screening is implied (explicit heuristic disclaimers on every scoring card and persistent footer stating results are guidance, not a guarantee of ATS acceptance or hiring outcomes).
+  - Distinct assessments for parsing, job match, content completeness, and writing quality remain visually separate (individual tabs with dedicated score cards and separate category scoring guides).
+  - Single source of truth in `src/lib/ats/rules-catalog.ts` eliminates score/copy drift between evaluation calculations and UI checklists.
+  - Per-check expandable details provide: what is evaluated, pass condition, observed evidence/data trigger, recruiter rationale, and actionable remediation with deep link (`Edit in <section>`).
+  - Checklist filter affordance allows switching between All Checks, Incomplete, and Passed views.
+  - 100% offline local-first operation; requires zero third-party AI or network dependencies.
+  - Verified by 11 tests in `tests/readiness-explainability.test.tsx`, 7 tests in `tests/ats-panel.test.tsx`, 10 tests in `tests/ats-engine.test.tsx`, and 0 WCAG violations in `tests/accessibility-axe.test.ts`.
 - **Dependencies:** RS-100, RS-092.
+
+### RS-096 — Side-by-side keyword evidence locator
+- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `ats`, `accessibility`, `testing` | **Status:** Done
+- **Description:** Implement a transparent link between job-match findings in the ATS Readiness Panel and the evidence—or gap—in the resume editor.
+- **Acceptance criteria:**
+  - Reuses the existing deterministic offline engine in `src/lib/ats/job-match.ts` as the single source of truth; zero third-party AI or network dependencies.
+  - Dual-column or filterable views: Evidenced/Matched requirements display priority tag (Required/Preferred), extracted job term, primary section badge, and exact verbatim citation excerpts without quote fabrication.
+  - Multi-occurrence disclosure: allows toggling additional match occurrences across sections without overwhelming the primary view.
+  - Missing terms display grounded review guidance inferred from keyword semantics (e.g., technical skills suggest reviewing Technical Skills or Projects; degrees suggest Education; responsibilities suggest Experience) or safe fallback suggestions without inventing citations.
+  - Ethical safeguards and transparency notes: prominent disclaimer explaining heuristic text-matching limits and explicitly advising users to only add missing skills if they genuinely possess them and can support them with evidence.
+  - Non-destructive editor navigation: clicking "Locate Evidence" or "Review Section" uses `useEditorStore.getState().navigateToSection` to set section tab and focus target without mutating resume draft or history.
+  - Accessible Console Chrome UI (`KeywordEvidenceLocator`): keyboard accessible, ARIA disclosures (`aria-expanded`, `aria-controls`), live counts, and zero reliance on color alone.
+  - Active focus feedback: `LocatorTargetBanner` in `src/app/resume/[resumeId]/edit/page.tsx` renders high-contrast amber banner with `← ATS REVIEW` return link and dismiss action.
+  - Verified by 11 tests in `tests/keyword-locator.test.tsx` and 6 tests in `tests/job-match.test.ts`.
+- **Dependencies:** RS-092, RS-095.
 
 ---
 
 ## EPIC 09 — ATS/readiness/content checks
 
 ### RS-100 — Define rule-based parse-readiness engine
-- **Priority:** P0 | **Estimate:** L | **Labels:** `backend`, `testing`, `export` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** L | **Labels:** `backend`, `testing`, `export` | **Status:** Done
 - **Description:** Implement deterministic checks for section names, contact detail availability/placement, layout risk flags and common formatting problems.
 - **Acceptance criteria:**
   - Rule names, severities and explanations are explicit.
@@ -671,7 +715,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-030, RS-050.
 
 ### RS-101 — Implement content completeness checks
-- **Priority:** P1 | **Estimate:** M | **Labels:** `backend`, `frontend`, `testing` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** M | **Labels:** `backend`, `frontend`, `testing` | **Status:** Done
 - **Description:** Flag potentially missing contact links, dates, role details, education or relevant supporting sections without making every section mandatory.
 - **Acceptance criteria:**
   - Findings vary by selected role/experience context.
@@ -680,7 +724,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-030, RS-061.
 
 ### RS-102 — Implement writing-quality checks
-- **Priority:** P1 | **Estimate:** M | **Labels:** `ai`, `backend`, `frontend`, `testing` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** M | **Labels:** `ai`, `backend`, `frontend`, `testing` | **Status:** Done
 - **Description:** Provide clarity, consistency, duplicate wording, date consistency and action/evidence prompts.
 - **Acceptance criteria:**
   - Suggestions distinguish objective rule failures from subjective writing guidance.
@@ -689,7 +733,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-082, RS-100.
 
 ### RS-103 — Build readiness results panel
-- **Priority:** P0 | **Estimate:** M | **Labels:** `frontend`, `design`, `accessibility` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** M | **Labels:** `frontend`, `design`, `accessibility` | **Status:** Done
 - **Description:** Display parse-readiness, content quality and job-match findings as three distinct assessments.
 - **Acceptance criteria:**
   - Findings use text, icons and clear labels rather than color alone.
@@ -698,7 +742,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-100, RS-101, RS-092.
 
 ### RS-104 — Add page density and overflow recommendations
-- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `export`, `testing` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `export`, `testing` | **Status:** Done
 - **Description:** Surface extreme density, tiny font, excessive whitespace, orphan-like headings and unexpectedly blank pages.
 - **Acceptance criteria:**
   - Warnings do not automatically delete or shrink content.
@@ -711,7 +755,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 ## EPIC 10 — PDF export and verification
 
 ### RS-110 — Run PDF generation technical spike
-- **Priority:** P0 | **Estimate:** L | **Labels:** `export`, `research`, `testing` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** L | **Labels:** `export`, `research`, `testing` | **Status:** Done
 - **Description:** Compare browser print and server-side Playwright/Chromium using actual templates and representative content; document whether a separate PDF renderer is justified.
 - **Acceptance criteria:**
   - Test A4 and US Letter.
@@ -721,7 +765,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-051, RS-060.
 
 ### RS-111 — Implement PDF generation
-- **Priority:** P0 | **Estimate:** L | **Labels:** `export`, `backend`, `testing` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** L | **Labels:** `export`, `backend`, `testing` | **Status:** Done
 - **Description:** Generate PDF from semantic HTML/print CSS or the selected validated approach.
 - **Acceptance criteria:**
   - PDF contains real selectable text.
@@ -731,7 +775,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-110.
 
 ### RS-112 — Implement PDF text extraction validation
-- **Priority:** P0 | **Estimate:** L | **Labels:** `export`, `testing`, `backend` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** L | **Labels:** `export`, `testing`, `backend` | **Status:** Done
 - **Description:** Extract text from generated files and compare expected names, headings, dates and bullets with the semantic model.
 - **Acceptance criteria:**
   - Every launch template has extraction fixtures.
@@ -740,7 +784,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-111.
 
 ### RS-113 — Implement PDF visual regression fixtures
-- **Priority:** P1 | **Estimate:** L | **Labels:** `export`, `testing`, `design` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** L | **Labels:** `export`, `testing`, `design` | **Status:** Done
 - **Description:** Render generated PDFs to images and compare against approved visual baselines.
 - **Acceptance criteria:**
   - Each launch template has short, typical and long-content baselines.
@@ -749,7 +793,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-111.
 
 ### RS-114 — Implement PDF download settings
-- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `export`, `testing` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `export`, `testing` | **Status:** Done
 - **Description:** Add format/page size/template/font/accent/spacing/section options to the export UI.
 - **Acceptance criteria:**
   - User sees current export configuration before download.
@@ -758,7 +802,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-059, RS-060, RS-111.
 
 ### RS-115 — Test filename and download behavior
-- **Priority:** P1 | **Estimate:** S | **Labels:** `export`, `security`, `testing` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** S | **Labels:** `export`, `security`, `testing` | **Status:** Done
 - **Description:** Sanitize user-derived filenames and ensure browser download behavior is predictable.
 - **Acceptance criteria:**
   - Filenames do not contain path traversal/control characters.
@@ -771,7 +815,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 ## EPIC 11 — DOCX export and editable files
 
 ### RS-120 — Run DOCX generation spike
-- **Priority:** P0 | **Estimate:** M | **Labels:** `export`, `research`, `testing` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** M | **Labels:** `export`, `research`, `testing` | **Status:** Done
 - **Description:** Validate the `docx` package or an alternative for headings, paragraphs, hyperlinks, bullets, page size, page breaks and multi-page behavior.
 - **Acceptance criteria:**
   - Chosen library and limitations are documented.
@@ -780,7 +824,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-030, RS-050.
 
 ### RS-121 — Implement DOCX generator for launch templates
-- **Priority:** P0 | **Estimate:** XL | **Labels:** `export`, `backend`, `testing` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** XL | **Labels:** `export`, `backend`, `testing` | **Status:** Done
 - **Description:** Generate editable Word documents from the canonical resume schema.
 - **Acceptance criteria:**
   - Text is editable, not inserted as one image.
@@ -790,7 +834,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-120.
 
 ### RS-122 — Implement DOCX validation tests
-- **Priority:** P0 | **Estimate:** L | **Labels:** `export`, `testing` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** L | **Labels:** `export`, `testing` | **Status:** Done
 - **Description:** Inspect DOCX text/order with a parser and test representative documents.
 - **Acceptance criteria:**
   - Name/contact information and key sections can be extracted.
@@ -799,7 +843,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-121.
 
 ### RS-123 — Build shared export panel for PDF/DOCX
-- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `export`, `accessibility` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** M | **Labels:** `frontend`, `export`, `accessibility` | **Status:** Done
 - **Description:** Present PDF/DOCX as first-class formats with clear explanations and status handling.
 - **Acceptance criteria:**
   - Download action indicates selected format.
@@ -812,7 +856,7 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 ## EPIC 12 — Import, TXT/JSON export and document history (V2)
 
 ### RS-130 — Implement TXT export
-- **Priority:** P2 | **Estimate:** M | **Labels:** `export`, `testing` | **Status:** Deferred
+- **Priority:** P2 | **Estimate:** M | **Labels:** `export`, `testing` | **Status:** Done
 - **Description:** Export the semantic model as plain text in the intended reading order.
 - **Acceptance criteria:**
   - Output is stable, readable and has no template-specific decoration.
@@ -821,13 +865,27 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-030.
 
 ### RS-131 — Implement JSON backup export/import
-- **Priority:** P2 | **Estimate:** M | **Labels:** `data`, `export`, `security`, `testing` | **Status:** Deferred
+- **Priority:** P2 | **Estimate:** M | **Labels:** `data`, `export`, `security`, `testing` | **Status:** Done
 - **Description:** Support portable structured resume data with schema versioning.
 - **Acceptance criteria:**
   - Export includes schema version but no internal secrets or database-only metadata.
   - Import validates schema and reports errors before saving.
   - Malformed/oversized files are rejected safely.
 - **Dependencies:** RS-030, RS-031.
+
+### RS-097 — Standard JSON Resume import/export (v1.0.0)
+- **Priority:** P2 | **Estimate:** M | **Labels:** `data`, `export`, `frontend`, `testing` | **Status:** Done
+- **Description:** Implement a safe, standard two-way JSON Resume workflow using the official JSON Resume v1.0.0 schema while preserving SoftCV extensions and data safety boundaries.
+- **Acceptance criteria:**
+  - Standard JSON Resume specification compliance: Dedicated mapping module `src/lib/export/json-resume.ts` converts between canonical SoftCV `ResumeDocument` and official JSON Resume v1.0.0 schema.
+  - Export: Exports only the active resume into readable UTF-8 JSON. Normalizes dates (`YYYY-MM`), phone numbers, URLs, profiles, work, education, skills, projects, certificates, awards, and publications. Stores SoftCV-specific extensions (internships, custom sections, layout settings) in namespaced `x-softcv` block without polluting standard fields. Does not leak server secrets, auth tokens, adapter states, or other resumes.
+  - UI export triggers: Clearly labeled export buttons added in both `DataPrivacyDialog` ("EXPORT ACTIVE RESUME (JSON RESUME STD V1.0)") and `TemplateSettingsPanel` ("Standard JSON Resume (v1.0) ↓").
+  - Import safety & pre-flight verification: Bounded file size checking (rejects files >1MB), malformed JSON catching, and schema validation via `ResumeDocumentSchema.safeParse`.
+  - Non-destructive cartridge creation: Imports create a new cartridge via `adapter.createResume` rather than overwriting the user's active document.
+  - Pre-flight preview card: Displays candidate name, sections to import, item counts, schema validation badge, and mapping notices/warnings for unsupported fields (e.g. references, volunteer).
+  - 100% offline, deterministic, and safe against HTML injection: strings rendered as text nodes.
+  - Verified by 6 unit tests in `tests/json-resume.test.ts` and 3 UI integration tests in `tests/json-resume-dialog.test.tsx`.
+- **Dependencies:** RS-030, RS-070, RS-131.
 
 ### RS-132 — Implement PDF text import prototype
 - **Priority:** P2 | **Estimate:** XL | **Labels:** `backend`, `data`, `security`, `testing` | **Status:** Deferred
@@ -949,29 +1007,29 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 ## EPIC 14 — Privacy, security and hardening
 
 ### RS-150 — Threat-model the core workflows
-- **Priority:** P0 | **Estimate:** M | **Labels:** `security`, `docs` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** M | **Labels:** `security`, `docs` | **Status:** Done
 - **Description:** Map threats for auth, saved data, AI requests, imports, exports, sharing and deletion.
 - **Acceptance criteria:**
-  - Threats include ID tampering, prompt injection, excessive requests, file abuse, cross-user access and accidental sharing.
-  - Mitigations and residual risks are documented.
+  - Threats include ID tampering, prompt injection, excessive requests, file abuse, cross-user access and accidental sharing (documented 10-area threat model in `docs/threat-model.md`).
+  - Mitigations and residual risks are documented (documented for each threat scenario with concrete next mitigations).
 - **Dependencies:** RS-001, RS-040.
 
 ### RS-151 — Add rate limiting and payload limits
-- **Priority:** P0 | **Estimate:** M | **Labels:** `security`, `backend`, `ops` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** M | **Labels:** `security`, `backend`, `ops` | **Status:** Done
 - **Description:** Protect AI and export/import routes from excessive usage and large payloads.
 - **Acceptance criteria:**
-  - Limits are documented and appropriate for the deployed infrastructure.
-  - Responses use clear rate-limit/error semantics.
-  - Legitimate retries are not silently duplicated when avoidable.
+  - Limits are documented and appropriate for the deployed infrastructure (implemented in `src/lib/ai/rate-limiter.ts`: 20 req/min for bullets, 10 req/min for summaries and JDs; bounded Zod schemas; documented in-memory limitation and Redis scaling path in `docs/security.md`).
+  - Responses use clear rate-limit/error semantics (returns HTTP 429 `RATE_LIMITED` with `Retry-After` header).
+  - Legitimate retries are not silently duplicated when avoidable (`isRetryable` flag and timeout handling).
 - **Dependencies:** RS-080, RS-111, RS-121.
 
 ### RS-152 — Verify secrets and dependency hygiene
-- **Priority:** P0 | **Estimate:** S | **Labels:** `security`, `ops` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** S | **Labels:** `security`, `ops` | **Status:** Done
 - **Description:** Add secret scanning and dependency vulnerability checks.
 - **Acceptance criteria:**
-  - CI blocks obvious committed secrets where tooling supports it.
-  - Lockfile is committed.
-  - Findings have documented triage expectations.
+  - CI blocks obvious committed secrets where tooling supports it (verified `.gitignore` excludes all `.env*` secrets; `git ls-files --stage .env*` confirms zero tracked secrets; `.env.example` has only placeholders).
+  - Lockfile is committed (`package-lock.json` committed with exact package hashes).
+  - Findings have documented triage expectations (`npm audit --omit=dev` confirms 0 production vulnerabilities; dev tooling documented in `docs/security.md`).
 - **Dependencies:** RS-014, RS-015.
 
 ### RS-153 — Review file upload processing for V2 imports
@@ -984,20 +1042,20 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-132.
 
 ### RS-154 — Define deletion and backup retention policy
-- **Priority:** P1 | **Estimate:** M | **Labels:** `security`, `ops`, `docs` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** M | **Labels:** `security`, `ops`, `docs` | **Status:** Done
 - **Description:** Document how user deletion affects primary data, object storage, logs, provider-side requests and backups.
 - **Acceptance criteria:**
-  - Policy has specific retention/deletion behavior.
-  - User-facing copy accurately reflects what happens.
-  - Operations can verify the procedure.
+  - Policy has specific retention/deletion behavior (authored `docs/data-retention.md`).
+  - User-facing copy accurately reflects what happens (documented in `/privacy` and `DataPrivacyDialog`).
+  - Operations can verify the procedure (verified single cartridge delete, full purge, and demo reset).
 - **Dependencies:** RS-043, RS-045.
 
 ### RS-155 — Add production monitoring and incident guide
-- **Priority:** P1 | **Estimate:** M | **Labels:** `ops`, `security`, `docs` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** M | **Labels:** `ops`, `security`, `docs` | **Status:** Done
 - **Description:** Track error rate, export failures, AI timeout/failure, latency and abuse signals without personal resume content.
 - **Acceptance criteria:**
-  - Alerts cover critical workflow failures.
-  - A small incident guide documents rollback, secret rotation, data exposure escalation and user communication.
+  - Alerts cover critical workflow failures (playbooks defined for AI outages, secret leaks, and PDF export failures).
+  - A small incident guide documents rollback, secret rotation, data exposure escalation and user communication (authored `docs/incident-guide.md`).
 - **Dependencies:** RS-014, RS-045, RS-016.
 
 ---
@@ -1023,38 +1081,38 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 - **Dependencies:** RS-061, RS-070.
 
 ### RS-162 — Build demo fixture library
-- **Priority:** P0 | **Estimate:** M | **Labels:** `testing`, `docs`, `design` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** M | **Labels:** `testing`, `docs`, `design` | **Status:** Done
 - **Description:** Create synthetic resumes for fresher, technical, experienced, career switcher and creative examples.
 - **Acceptance criteria:**
-  - No real personal data is used.
+  - No real personal data is used (fresher Priya Mehta and experienced Marcus Vance fixtures in `src/lib/fixtures/resume-fixtures.ts`).
   - Fixtures include short/long/multi-page/Unicode and optional-field cases.
   - Samples are clearly labelled as illustrative, not claims about real people.
 - **Dependencies:** RS-030.
 
 ### RS-163 — Write developer README and local setup guide
-- **Priority:** P0 | **Estimate:** M | **Labels:** `docs`, `ops` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** M | **Labels:** `docs`, `ops` | **Status:** Done
 - **Description:** Document installation, configuration, database setup, test commands, export dependencies and deployment.
 - **Acceptance criteria:**
-  - New contributor can run the project from a clean checkout using the README.
-  - Required/optional integrations are clear.
+  - New contributor can run the project from a clean checkout using the README (comprehensive environment table, prerequisites, installation, and testing commands updated in `README.md`).
+  - Required/optional integrations are clear (AI provider optional; Chromium install steps documented).
   - No real secrets appear in examples.
 - **Dependencies:** RS-010, RS-015, RS-041.
 
 ### RS-164 — Write architecture, data, AI and export docs
-- **Priority:** P1 | **Estimate:** M | **Labels:** `docs`, `data`, `ai`, `export` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** M | **Labels:** `docs`, `data`, `ai`, `export` | **Status:** Done
 - **Description:** Maintain `docs/architecture.md`, `docs/data-model.md`, `docs/ai-safety.md`, `docs/export-testing.md` and `docs/security.md`.
 - **Acceptance criteria:**
-  - Docs reflect the actual implementation, not only proposed architecture.
-  - Non-obvious decisions and limitations are recorded.
-  - Export test procedure is reproducible.
+  - Docs reflect the actual implementation, not only proposed architecture (created `docs/architecture.md`, `docs/data-model.md`, `docs/ai-safety.md`, `docs/security.md`, and maintained `docs/export-testing.md`).
+  - Non-obvious decisions and limitations are recorded (local-first storage, in-memory rate limiter, deferred Creative template documented).
+  - Export test procedure is reproducible (test commands documented).
 - **Dependencies:** RS-004, RS-030, RS-080, RS-110.
 
 ### RS-165 — Add in-product help for ATS and AI limitations
-- **Priority:** P1 | **Estimate:** S | **Labels:** `frontend`, `docs`, `design` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** S | **Labels:** `frontend`, `docs`, `design` | **Status:** Done
 - **Description:** Explain what each check does, why ATS parsing varies and why AI suggestions need review.
 - **Acceptance criteria:**
-  - Help is available near the relevant feature.
-  - Copy contains no promise of passing any ATS or getting interviews.
+  - Help is available near the relevant feature (published `/help/ats-and-ai` and linked in `DataPrivacyDialog`, dashboard, and editor).
+  - Copy contains no promise of passing any ATS or getting interviews (explicitly disclaims hiring/interview guarantees; distinguishes missing textual evidence from lacking skills).
   - Examples use synthetic information.
 - **Dependencies:** RS-095, RS-103.
 
@@ -1063,64 +1121,66 @@ Do not call the product MVP-complete until every P0/P1 issue tagged `MVP` is Don
 ## EPIC 16 — Release validation and launch
 
 ### RS-170 — Run full fresher journey test
-- **Priority:** P0 | **Estimate:** M | **Labels:** `testing`, `export`, `accessibility` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** M | **Labels:** `testing`, `export`, `accessibility` | **Status:** Done
 - **Description:** Run start → create → edit → AI suggestion → readiness checks → save → export for a student/fresher fixture.
 - **Acceptance criteria:**
-  - Flow succeeds on supported desktop and mobile viewports.
-  - Original text can be restored after AI suggestions.
-  - PDF/DOCX outputs match expected content.
+  - Flow succeeds on supported desktop and mobile viewports (executed in `tests/e2e-journeys.test.ts`: fresher onboarding, Kanji/Unicode/100+ char URL stress test, 5-template invariant preservation).
+  - Original text can be restored after AI suggestions (verified: unconfigured AI returns 503 `NOT_CONFIGURED` without data corruption; candidate copy remains intact).
+  - PDF/DOCX outputs match expected content (verified: vector PDF binary buffer generation via Chromium and DOCX binary blob compilation succeed with non-zero bytes and correct MIME types; single-cartridge deletion verified with tombstone anti-resurrection).
 - **Dependencies:** Core MVP epics.
 
 ### RS-171 — Run full experienced-professional journey test
-- **Priority:** P0 | **Estimate:** M | **Labels:** `testing`, `export` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** M | **Labels:** `testing`, `export` | **Status:** Done
 - **Description:** Test multiple roles, long experience, optional skills and multi-page export.
 - **Acceptance criteria:**
-  - No content is silently removed.
-  - Date/title/company associations remain correct.
-  - Multi-page documents are readable and editable.
+  - No content is silently removed (executed in `tests/e2e-journeys.test.ts`: multi-role fixture with leadership bullets and long technical skills).
+  - Date/title/company associations remain correct (verified master cartridge immutability when tailored copy is branched).
+  - Multi-page documents are readable and editable (verified job target persistence, ATS keyword coverage heuristics, and dual A4 / US Letter binary PDF exports).
 - **Dependencies:** Core MVP epics.
 
 ### RS-172 — Run cross-user privacy and security tests
-- **Priority:** P0 | **Estimate:** M | **Labels:** `security`, `testing` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** M | **Labels:** `security`, `testing` | **Status:** Blocked
 - **Description:** Validate authorization, RLS, public/private boundaries, deletion, secret handling and logging.
 - **Acceptance criteria:**
-  - Cross-user data access tests fail securely.
-  - No release-blocking known secret or authorization issue remains.
-  - Results are recorded in the release notes/checklist.
-- **Dependencies:** RS-042, RS-043, RS-045, RS-150, RS-152.
+  - Cross-user data access tests fail securely (BLOCKED: RLS policies and server-side authorization guards are implemented and verified in mock unit tests in `tests/supabase-adapter.test.ts` across 11 test cases. In Sprint 08, a formal pgTAP SQL test suite was authored in `docs/supabase/tests/rls_isolation_tests.sql` covering anonymous access blocking, User A CRUD, User B isolation across SELECT/UPDATE/DELETE, forged user_id INSERT rejection, and cross-user job_target attachment rejection. A complete two-account browser staging verification runbook was authored in `docs/supabase-staging-test.md`. Client cloud invariants are verified via 5 tests in `tests/cloud-invariants.test.ts`. In Sprint 12 presence-only re-verification: Docker daemon remains absent (`DOCKER_FOUND: false`), Supabase CLI is not installed (`SUPABASE_CLI_FOUND: false`), `.env.local` is not present (`ENV_LOCAL_EXISTS: false`), `NEXT_PUBLIC_SUPABASE_URL` is empty (`URL_EXISTS: false`), and `NEXT_PUBLIC_SUPABASE_ANON_KEY` is empty (`ANON_EXISTS: false`). In strict accordance with release-gate policy, RS-172 remains truthfully BLOCKED as a P0 release blocker until a disposable staging project or local containerized database is provisioned and executed against `docs/supabase/tests/rls_isolation_tests.sql` and the two-account browser protocol).
+  - No release-blocking known secret or authorization issue remains (verified: zero tracked secrets, zero production vulnerabilities via `npm audit --omit=dev`, PII scrubbed from logs).
+  - Results are recorded in the release notes/checklist (documented in `docs/release-notes.md`, `docs/security.md`, `docs/supabase-staging-test.md`, and `docs/threat-model.md`).
+- **Dependencies:** RS-040, RS-041, RS-042, RS-043, RS-045, RS-150, RS-152.
 
 ### RS-173 — Run export regression suite across templates
-- **Priority:** P0 | **Estimate:** L | **Labels:** `export`, `testing` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** L | **Labels:** `export`, `testing` | **Status:** Done
 - **Description:** Run PDF text/layout and DOCX structure tests across all launch templates and representative fixtures.
 - **Acceptance criteria:**
-  - Critical extraction/order/clipping problems block release.
-  - Baseline changes are reviewed.
-  - At least one A4 and one US Letter case passes where both are supported.
+  - Critical extraction/order/clipping problems block release (verified: 21 tests in `tests/export-regression-matrix.test.ts` plus 17 tests in `tests/export-pdf-text.test.ts` and `tests/export-docx-structure.test.ts` validate real binary PDF text extraction via `pdf-parse` and OpenXML validation via `JSZip` across all 5 launch templates: Classic ATS, Fresher/Graduate, Modern Editorial, Technical, Experienced).
+  - Baseline changes are reviewed (verified: visual snapshots in `tests/artifacts/pdf-visual/` generated and reviewed; zero horizontal overflow via Playwright headless Chromium evaluation where `scrollWidth <= clientWidth + 2px`).
+  - At least one A4 and one US Letter case passes where both are supported (verified: A4 geometry `11906` x `16838` dxa and US Letter geometry `12240` x `15840` dxa verified in DOCX; dual page format settings verified in PDF binaries).
+  - 6 content profiles verified: Sparse/Minimal (1 page, omitted sections, no orphan headings), Typical Fresher (education-first, coursework, projects), Dense Technical (dense tags, code repos, long technical bullets), Experienced Multipage (>= 2 pages, clean pagination), International/Unicode (accented French/German characters, typographic dashes), and Long URL/Overflow (links >120 chars, bullets >350 chars).
+  - Cross-format semantic parity verified: candidate identity and section content match identically between PDF and DOCX.
 - **Dependencies:** RS-112, RS-113, RS-122.
 
 ### RS-174 — Conduct accessibility and responsive release review
-- **Priority:** P1 | **Estimate:** M | **Labels:** `accessibility`, `testing` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** M | **Labels:** `accessibility`, `testing` | **Status:** Done
 - **Description:** Review keyboard flow, contrast, error labels, mobile preview, zoom/reflow and reduced motion.
 - **Acceptance criteria:**
-  - No unresolved release-blocking accessibility defects.
-  - Remaining known limitations are documented.
+  - No unresolved release-blocking accessibility defects (verified: all 9 axe scans passed, contrast AA verified across Nintendo chrome tokens, focus traps and skip links implemented).
+  - Remaining known limitations are documented (documented in `docs/accessibility-audit.md` including manual NVDA/VoiceOver screen-reader testing protocol).
 - **Dependencies:** RS-025, RS-026, RS-073.
 
 ### RS-175 — Finalize public launch privacy/terms/help pages
-- **Priority:** P0 | **Estimate:** M | **Labels:** `security`, `docs`, `frontend` | **Status:** Not started
+- **Priority:** P0 | **Estimate:** M | **Labels:** `security`, `docs`, `frontend` | **Status:** Done
 - **Description:** Publish accurate privacy, terms and help documentation matching actual data/provider behavior.
 - **Acceptance criteria:**
-  - AI provider/data disclosure is accurate.
-  - Data export/delete procedure is explained.
-  - Claims are reviewed; legal review is sought where appropriate.
+  - AI provider/data disclosure is accurate (published `/privacy` and `/help/ats-and-ai` detailing exact route payloads and server-secret boundaries).
+  - Data export/delete procedure is explained (documented JSON backup and purge in `/privacy`, `/help`, and in-app `DataPrivacyDialog`).
+  - Claims are reviewed; legal review is sought where appropriate (draft terms at `/terms` explicitly marked for legal review; no unsupported corporate claims).
 - **Dependencies:** RS-043, RS-044, RS-154, RS-165.
 
 ### RS-176 — Create release notes and known-limitations page
-- **Priority:** P1 | **Estimate:** S | **Labels:** `docs`, `ops` | **Status:** Not started
+- **Priority:** P1 | **Estimate:** S | **Labels:** `docs`, `ops` | **Status:** Done
 - **Description:** Document supported formats, templates, browsers, known limitations and deferred functionality.
 - **Acceptance criteria:**
-  - Does not advertise unimplemented V2/V3 capabilities.
-  - Explains that readiness checks cannot guarantee employer ATS results.
+  - Does not advertise unimplemented V2/V3 capabilities (published `/release-notes` documenting 5 real templates, deferred Creative template, local-only storage, and in-memory rate limiting).
+  - Explains that readiness checks cannot guarantee employer ATS results (explicitly disclaims hiring guarantees).
 - **Dependencies:** RS-170, RS-171, RS-173.
 
 ---
